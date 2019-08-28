@@ -1,4 +1,4 @@
-function isLeapYear( year: number ) {
+function isLeapYear( year: number ): boolean {
     // Your code here
     if (year % 400 === 0) {
         return true
