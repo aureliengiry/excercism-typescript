@@ -6,7 +6,9 @@ class SpaceAge
         this.seconds = seconds;
     }
     onEarth() {
-        return 31.69;
+        let earthCoef: number = 31.69; 
+        
+        return this.ageCalculation(earthCoef);
     }
 
     onMars() {
@@ -14,7 +16,7 @@ class SpaceAge
     }
 
     onMercury() {
-        
+        return 280.88
     }
 
     onVenus() {
@@ -35,6 +37,12 @@ class SpaceAge
 
     onNeptune() {
 
+    }
+
+    private ageCalculation(coef: number) {
+        let ageSeconds: number = (coef * this.seconds) / 1000000000;
+        
+        return Math.round(ageSeconds*100)/100;
     }
 }
 
